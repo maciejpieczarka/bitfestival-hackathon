@@ -5,13 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private const float MAX_WALKING_SPEED = 5.0f;
-    private const float MAX_RUNNING_SPEED = 25.0f;
     private const float ROTATION_SPEED = 120.0f;
-    private const float BACKWARDS_TO_FORWARD_RATIO = 0.8f;
+    private const float BACKWARDS_TO_FORWARD_RATIO = 0.7f;
+    private const float RUNNING_TO_WALKING_RATIO = 2.0f;
 
     private float m_Speed = 0.0f;
     private bool movingForwards = false;
     private bool movingBackwards = false;
+    private bool running = false;
 
     private Animator m_Animator;
 
@@ -31,27 +32,28 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            Debug.Log("moving forwards: " + Time.time);
             movingForwards = true;
             movingBackwards = false;
         }  
         else if (Input.GetKey(KeyCode.S))
         {
-            Debug.Log("moving backwards: " + Time.time);
             movingForwards = false;
             movingBackwards = true;
         }
         else
         {
-            Debug.Log("not moving: " + Time.time);
             movingForwards = false;
             movingBackwards = false;
         }
 
+        if (Input.GetKey(KeyCode.LeftShift))
+            running = true;
+        else
+            running = false;
+
         if (movingForwards || movingBackwards)
         {
-/*            Debug.Log("walking: " + Time.time);
-*/            m_Animator.SetBool("walking", true);
+            m_Animator.SetBool("walking", true);
             remainingSlideTime -= Time.deltaTime;
             if (remainingSlideTime < 0.0f)
                 remainingSlideTime = 0.0f;
@@ -77,6 +79,14 @@ public class PlayerController : MonoBehaviour
 
         m_Speed = speedFactor * MAX_WALKING_SPEED;
         m_Animator.SetFloat("movingSpeed", speedFactor);
+
+        if (running && !movingBackwards)
+        {
+            m_Animator.SetBool("running", true);
+            m_Speed *= RUNNING_TO_WALKING_RATIO;
+        }
+        else
+            m_Animator.SetBool("running", false);
 
         transform.Translate(Vector3.forward * forwardInput * Time.deltaTime * m_Speed);
 
