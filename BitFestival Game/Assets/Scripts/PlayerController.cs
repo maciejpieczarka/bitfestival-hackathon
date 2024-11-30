@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public const float MAX_SPEED = 50.0f;
+    private const float MAX_WALKING_SPEED = 15.0f;
+    private const float MAX_RUNNING_SPEED = 25.0f;
+    private const float ROTATION_SPEED = 120.0f;
+    private const float BACKWARDS_TO_FORWARD_RATIO = 0.8f;
 
-    private const float EPSILON = 0.001f;
+    private float m_Speed = 0.0f;
+    private bool movingForwards = false;
+    private bool movingBackwards = false;
 
-    private float curSpeed = 0.0f;
-
-    private bool movingForward = false;
+    private Animator m_Animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_Animator = GetComponent<Animator>();
     }
 
     private float slideDuration = 1.0f;
@@ -25,26 +28,53 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float forwardInput = Input.GetAxis("Vertical");
-        float horizontalInput = Input.GetAxis("Horizontal");
 
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)
-            || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.W))
         {
+            movingForwards = true;
+            movingBackwards = false;
+        }  
+        else if (Input.GetKey(KeyCode.S))
+        {
+            movingForwards = false;
+            movingBackwards = true;
+        }
+        else
+        {
+            movingForwards = false;
+            movingBackwards = false;
+        }
+
+        if (movingForwards || movingBackwards)
+        {
+            m_Animator.SetBool("walking", true);
             remainingSlideTime -= Time.deltaTime;
             if (remainingSlideTime < 0.0f)
                 remainingSlideTime = 0.0f;
         }
         else
         {
+            m_Animator.SetBool("walking", false);
             remainingSlideTime += Time.deltaTime * 2;
             if (remainingSlideTime > slideDuration)
                 remainingSlideTime = slideDuration;
         }
 
-        curSpeed = (slideDuration - remainingSlideTime) / slideDuration * MAX_SPEED;
+        m_Animator.SetBool("movingBackwards", movingBackwards);
 
-        transform.Translate(transform.forward * forwardInput * Time.deltaTime * curSpeed);
-        transform.Translate(transform.right * horizontalInput * Time.deltaTime * curSpeed);
-        Debug.Log("curSpeed: " + curSpeed);
+        if (Input.GetKey(KeyCode.A))
+            transform.Rotate(0, -ROTATION_SPEED * Time.deltaTime, 0);
+        if (Input.GetKey(KeyCode.D))
+            transform.Rotate(0, ROTATION_SPEED * Time.deltaTime, 0);
+
+        float speedFactor = (slideDuration - remainingSlideTime) / slideDuration;
+        if (movingBackwards)
+            speedFactor *= BACKWARDS_TO_FORWARD_RATIO;
+
+        m_Speed = speedFactor * MAX_WALKING_SPEED;
+        m_Animator.SetFloat("movingSpeed", speedFactor);
+
+        transform.Translate(Vector3.forward * forwardInput * Time.deltaTime * m_Speed);
+
     }
 }
