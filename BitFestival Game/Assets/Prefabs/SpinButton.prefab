@@ -273,7 +273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3737422369159804970
 RectTransform:
   m_ObjectHideFlags: 0
@@ -347,6 +347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetButton: {fileID: 4817135460768788485}
   spinSpeed: -200
+  angleErrorMargin: 45
 --- !u!1 &8964537109702971856
 GameObject:
   m_ObjectHideFlags: 0
