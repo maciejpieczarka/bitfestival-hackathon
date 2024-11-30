@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
     private const float Y_POSITION = 20.0f;
 
     private Room room1 = new Room(-2, -28, 2, -25);
+    private Room room2 = new Room(-12, -8, 12, 14);
 
     private Room currentRoom;
 
@@ -28,6 +29,19 @@ public class CameraController : MonoBehaviour
         float xPos = Math.Min(Math.Max(playerPosition.x, currentRoom.lowerXBound), currentRoom.upperXBound);
         float zPos = Math.Min(Math.Max(playerPosition.z, currentRoom.lowerZBound), currentRoom.upperZBound);
         transform.position = new Vector3(xPos, Y_POSITION, zPos);
+    }
+
+    public void SwitchRoomView(DoorTrigger.Trigger trigger)
+    {
+        switch(trigger)
+        {
+            case DoorTrigger.Trigger.FROM_1_TO_2:
+                currentRoom = room2;
+                break;
+            case DoorTrigger.Trigger.FROM_2_TO_1:
+                currentRoom = room1;
+                break;
+        }
     }
 }
 public struct Room

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController2 : MonoBehaviour
@@ -11,12 +12,19 @@ public class PlayerController2 : MonoBehaviour
     private float m_Speed = 0.0f;
     private bool running = false;
 
+    private float lastTrigger = 0.0f;
+    private float triggerRecover = 0.3f;
+
     private Animator m_Animator;
+
+    private CameraController cameraController;
 
     // Start is called before the first frame update
     void Start()
     {
         m_Animator = GetComponent<Animator>();
+
+        cameraController = GameObject.Find("Main Camera").GetComponent<CameraController>();
     }
 
     // Update is called once per frame
@@ -78,6 +86,33 @@ public class PlayerController2 : MonoBehaviour
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * ROTATION_SMOOTHNESS);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (lastTrigger + triggerRecover > Time.time)
+            return;
+        
+        lastTrigger = Time.time;
+        if (other.CompareTag("trigger"))
+        {
+            Debug.Log("trigger enter: " + Time.time);
+            DoorTrigger.Trigger trigger = other.GetComponent<DoorTrigger>().trigger;
+            cameraController.SwitchRoomView(trigger);
+            switch (trigger)
+            {
+                case DoorTrigger.Trigger.FROM_1_TO_2:
+                    Debug.Log("trigger enter first: " + Time.time);
+                    transform.position = new Vector3(0, 0, -14);
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                    break;
+                case DoorTrigger.Trigger.FROM_2_TO_1:
+                    Debug.Log("trigger enter second: " + Time.time);
+                    transform.position = new Vector3(0, 0, -19);
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                    break;
+            }
         }
     }
 }
