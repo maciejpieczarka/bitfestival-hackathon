@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private const float MAX_WALKING_SPEED = 15.0f;
+    private const float MAX_WALKING_SPEED = 5.0f;
     private const float MAX_RUNNING_SPEED = 25.0f;
     private const float ROTATION_SPEED = 120.0f;
     private const float BACKWARDS_TO_FORWARD_RATIO = 0.8f;
@@ -31,23 +31,27 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
+            Debug.Log("moving forwards: " + Time.time);
             movingForwards = true;
             movingBackwards = false;
         }  
         else if (Input.GetKey(KeyCode.S))
         {
+            Debug.Log("moving backwards: " + Time.time);
             movingForwards = false;
             movingBackwards = true;
         }
         else
         {
+            Debug.Log("not moving: " + Time.time);
             movingForwards = false;
             movingBackwards = false;
         }
 
         if (movingForwards || movingBackwards)
         {
-            m_Animator.SetBool("walking", true);
+/*            Debug.Log("walking: " + Time.time);
+*/            m_Animator.SetBool("walking", true);
             remainingSlideTime -= Time.deltaTime;
             if (remainingSlideTime < 0.0f)
                 remainingSlideTime = 0.0f;
