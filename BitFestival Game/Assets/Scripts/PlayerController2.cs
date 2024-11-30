@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController2 : MonoBehaviour
 {
-    private const float MAX_WALKING_SPEED = 5.0f;
+    private const float MAX_WALKING_SPEED = 10.0f;
     private const float RUNNING_TO_WALKING_RATIO = 2.0f;
     private const float ROTATION_SMOOTHNESS = 10.0f; // Controls how smooth the rotation is
 

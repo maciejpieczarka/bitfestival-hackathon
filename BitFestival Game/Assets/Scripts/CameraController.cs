@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour
 
     private Room room1 = new Room(-2, -28, 2, -25);
     private Room room2 = new Room(-12, -8, 12, 14);
+    private Room room3 = new Room(-2, 30, 2, 39);
 
     private Room currentRoom;
 
@@ -40,6 +41,12 @@ public class CameraController : MonoBehaviour
                 break;
             case DoorTrigger.Trigger.FROM_2_TO_1:
                 currentRoom = room1;
+                break;
+            case DoorTrigger.Trigger.FROM_2_TO_3:
+                currentRoom = room3;
+                break;
+            case DoorTrigger.Trigger.FROM_3_TO_2:
+                currentRoom = room2;
                 break;
         }
     }

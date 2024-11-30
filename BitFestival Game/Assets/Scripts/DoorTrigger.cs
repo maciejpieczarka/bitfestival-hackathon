@@ -8,6 +8,8 @@ public class DoorTrigger : MonoBehaviour
     {
         FROM_1_TO_2,
         FROM_2_TO_1,
+        FROM_2_TO_3,
+        FROM_3_TO_2,
     }
 
     public Trigger trigger;
