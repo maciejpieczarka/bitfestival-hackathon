@@ -17,6 +17,12 @@ public class MainMenu : MonoBehaviour
         MusicManager.Instance.PlayMusic("MainMenu");
     }
 
+    public void Restart()
+    {
+        SceneManager.LoadScene(0);
+        MusicManager.Instance.PlayMusic("MainMenu");
+    }
+
     public void Play() 
     {
         SceneManager.LoadScene(0);
