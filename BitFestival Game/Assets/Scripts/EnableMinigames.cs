@@ -49,6 +49,10 @@ public class EnableMinigames : MonoBehaviour
         {
             switchMiniGame.SetActive(!switchMiniGame.activeSelf);
         }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            SceneManager.LoadScene("EndMenu");
+        }
     }
 
     public void OpenFristDoor()
