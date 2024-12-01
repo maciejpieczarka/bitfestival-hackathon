@@ -21,11 +21,9 @@ public class EnableMinigames : MonoBehaviour
         // Check if the "E" key is pressed
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("ummm deep! " + Time.time);
             switch (playerController.possibleAction)
             {
                 case PlayerController2.PossibleAction.OPEN_FIRST_DOOR:
-                    Debug.Log("Ahh, deeeper! " + Time.time);
                     if (!firstDoorOpened)
                         spamButtonMinigame.SetActive(true);
                     break;
@@ -36,5 +34,6 @@ public class EnableMinigames : MonoBehaviour
     public void OpenFristDoor()
     {
         firstDoorOpened = true;
+        GameObject.Find("door1 trigger1").transform.position = new Vector3(0.0f, 5.91f, -16.75f);
     }
 }

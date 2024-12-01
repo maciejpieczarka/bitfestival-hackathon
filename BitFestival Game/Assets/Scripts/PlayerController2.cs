@@ -113,6 +113,7 @@ public class PlayerController2 : MonoBehaviour
             switch (trigger)
             {
                 case DoorTrigger.Trigger.FROM_1_TO_2:
+                    Debug.Log("case occured: " + Time.time);
                     transform.position = new Vector3(0, 0, -12);
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                     break;
