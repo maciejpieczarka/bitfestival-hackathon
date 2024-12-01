@@ -75,7 +75,7 @@ public class SpinnerButton : MonoBehaviour
         }
         else
         {
-            Debug.Log("BRUH TRY AGAIN");
+            tmpText.text = "You failed!";
         }
     }
 }
