@@ -7,7 +7,6 @@ public class ToggleButtons : MonoBehaviour
 {
     public Button[] buttons; // Array to hold the buttons
     public Toggle[] toggles; // Array to hold the toggles
-
     private void Start()
     {
         // Validate arrays
@@ -58,6 +57,10 @@ public class ToggleButtons : MonoBehaviour
 
         // Rotate the button
         TurnButton(index);
+
+        if (!toggles[0].isOn && toggles[1].isOn && toggles[2].isOn && toggles[3].isOn && !toggles[4].isOn) {
+            Debug.Log("TAK!!!");
+        }
     }
 
     private void TurnButton(int index)
