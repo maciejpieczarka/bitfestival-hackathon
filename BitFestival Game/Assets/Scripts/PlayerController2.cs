@@ -5,6 +5,14 @@ using UnityEngine;
 
 public class PlayerController2 : MonoBehaviour
 {
+    public enum PossibleAction
+    {
+        NONE,
+        OPEN_FIRST_DOOR,
+    }
+
+    public PossibleAction possibleAction = PossibleAction.NONE;
+
     private const float MAX_WALKING_SPEED = 10.0f;
     private const float RUNNING_TO_WALKING_RATIO = 2.0f;
     private const float ROTATION_SMOOTHNESS = 10.0f; // Controls how smooth the rotation is
@@ -13,7 +21,7 @@ public class PlayerController2 : MonoBehaviour
     private bool running = false;
 
     private float lastTrigger = 0.0f;
-    private float triggerRecover = 0.3f;
+    private float triggerRecover = 0.1f;
 
     private Animator m_Animator;
 
@@ -105,11 +113,11 @@ public class PlayerController2 : MonoBehaviour
             switch (trigger)
             {
                 case DoorTrigger.Trigger.FROM_1_TO_2:
-                    transform.position = new Vector3(0, 0, -14);
+                    transform.position = new Vector3(0, 0, -13);
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                     break;
                 case DoorTrigger.Trigger.FROM_2_TO_1:
-                    transform.position = new Vector3(0, 0, -19);
+                    transform.position = new Vector3(0, 0, -21);
                     transform.rotation = Quaternion.Euler(0, 180, 0);
                     break;
                 case DoorTrigger.Trigger.FROM_2_TO_3:
@@ -119,6 +127,27 @@ public class PlayerController2 : MonoBehaviour
                 case DoorTrigger.Trigger.FROM_3_TO_2:
                     transform.position = new Vector3(0, 0, 19);
                     transform.rotation = Quaternion.Euler(0, 180, 0);
+                    break;
+                case DoorTrigger.Trigger.OPEN_FIRST_DOOR_TRIGGER:
+                    possibleAction = PossibleAction.OPEN_FIRST_DOOR;
+                    break;
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("trigger"))
+        {
+            if (other.GetComponent<DoorTrigger>() == null)
+                return;
+
+            DoorTrigger.Trigger trigger = other.GetComponent<DoorTrigger>().trigger;
+            cameraController.SwitchRoomView(trigger);
+            switch (trigger)
+            {
+                case DoorTrigger.Trigger.OPEN_FIRST_DOOR_TRIGGER:
+                    possibleAction = PossibleAction.NONE;
                     break;
             }
         }

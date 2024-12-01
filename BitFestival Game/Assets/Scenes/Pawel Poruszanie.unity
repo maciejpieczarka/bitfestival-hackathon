@@ -498,7 +498,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3563102908933231604, guid: fae82a1b326d9524ba7d90bf28e61a17, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -7.63
       objectReference: {fileID: 0}
     - target: {fileID: 3563102908933231604, guid: fae82a1b326d9524ba7d90bf28e61a17, type: 3}
       propertyPath: m_LocalPosition.y
@@ -506,7 +506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3563102908933231604, guid: fae82a1b326d9524ba7d90bf28e61a17, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.28
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 3563102908933231604, guid: fae82a1b326d9524ba7d90bf28e61a17, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1000,6 +1000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBox
       objectReference: {fileID: 0}
+    - target: {fileID: 5955922028522984407, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8595897220107735892, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -1009,11 +1013,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
---- !u!1 &984958142 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5955922028522984407, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
-  m_PrefabInstance: {fileID: 984958141}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1016572118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,6 +1467,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2038201487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1410802455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8419381233647364790, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+  m_PrefabInstance: {fileID: 984958141}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1440339218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,7 +1502,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ebcf3eefe81e542abe23ca65523590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 984958142}
+  canvas: {fileID: 1410802455}
+  prefabToInstantiate: {fileID: 1410802455}
+  spawnPoint: {fileID: 0}
 --- !u!135 &1440339220
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1514,7 +1520,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1530,7 +1536,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -23.69, y: 1.2218275, z: 1.1399999}
-  m_LocalScale: {x: 6.486, y: 6.486, z: 6.486}
+  m_LocalScale: {x: 8.588113, y: 8.588113, z: 8.588113}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

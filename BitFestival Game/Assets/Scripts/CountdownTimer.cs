@@ -106,14 +106,20 @@ public class CountdownTimer : MonoBehaviour
 
     private void TwoMinutesLeft()
     {
-        Debug.Log("Two minutes left!");
-        // Add your custom logic here
+        Transform computerStart = canvas.transform.Find("CountdownTwoMinutesDialog");
+        if (computerStart != null)
+        {
+            computerStart.gameObject.SetActive(true);
+        }
     }
 
     private void OneMinuteLeft()
     {
-        Debug.Log("One minute left!");
-        // Add your custom logic here
+        Transform computerStart = canvas.transform.Find("CountdownOneMinuteDialog");
+        if (computerStart != null)
+        {
+            computerStart.gameObject.SetActive(true);
+        }
     }
 
     private void TimerEnds()

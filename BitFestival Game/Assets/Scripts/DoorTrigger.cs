@@ -11,6 +11,7 @@ public class DoorTrigger : MonoBehaviour
         FROM_2_TO_3,
         FROM_3_TO_2,
         SOME_TRIGGER,
+        OPEN_FIRST_DOOR_TRIGGER,
     }
 
     public Trigger trigger;
