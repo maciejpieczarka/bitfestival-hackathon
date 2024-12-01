@@ -113,11 +113,11 @@ public class PlayerController2 : MonoBehaviour
             switch (trigger)
             {
                 case DoorTrigger.Trigger.FROM_1_TO_2:
-                    transform.position = new Vector3(0, 0, -13);
+                    transform.position = new Vector3(0, 0, -12);
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                     break;
                 case DoorTrigger.Trigger.FROM_2_TO_1:
-                    transform.position = new Vector3(0, 0, -21);
+                    transform.position = new Vector3(0, 0, -22);
                     transform.rotation = Quaternion.Euler(0, 180, 0);
                     break;
                 case DoorTrigger.Trigger.FROM_2_TO_3:
