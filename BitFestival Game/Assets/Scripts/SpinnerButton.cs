@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class SpinnerButton : MonoBehaviour
 {
     public Button targetButton; // Assign the button in the Inspector
     public float spinSpeed = -200f; // Speed of the rotation in degrees per second
-    public float angleErrorMargin = 45f;
-
+    public float angleErrorMargin = 20f;
+    private int timesSpined = 0;
     private RectTransform buttonRectTransform;
     private bool isSpinning = true;
     private float originalZRotation; // The initial rotation of the button on the Z-axis
-
+    public TextMeshProUGUI tmpText;
     private void Start()
     {
         // Ensure the button is assigned
@@ -59,10 +59,19 @@ public class SpinnerButton : MonoBehaviour
 
         // Normalize the angles for comparison
         float rotationDifference = Mathf.DeltaAngle(originalZRotation, currentZRotation);
-
+        Debug.Log(rotationDifference);
         if (Mathf.Abs(rotationDifference) <= angleErrorMargin)
         {
-            Debug.Log("YEYY!!");
+            timesSpined++;
+            if(timesSpined < 3)
+            {
+                spinSpeed *= -1.3f;
+                isSpinning = true;
+            }
+            else
+            {
+                tmpText.text = "Vault opened";
+            }
         }
         else
         {
