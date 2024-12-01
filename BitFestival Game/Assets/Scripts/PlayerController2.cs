@@ -97,19 +97,24 @@ public class PlayerController2 : MonoBehaviour
         lastTrigger = Time.time;
         if (other.CompareTag("trigger"))
         {
-            Debug.Log("trigger enter: " + Time.time);
             DoorTrigger.Trigger trigger = other.GetComponent<DoorTrigger>().trigger;
             cameraController.SwitchRoomView(trigger);
             switch (trigger)
             {
                 case DoorTrigger.Trigger.FROM_1_TO_2:
-                    Debug.Log("trigger enter first: " + Time.time);
                     transform.position = new Vector3(0, 0, -14);
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                     break;
                 case DoorTrigger.Trigger.FROM_2_TO_1:
-                    Debug.Log("trigger enter second: " + Time.time);
                     transform.position = new Vector3(0, 0, -19);
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                    break;
+                case DoorTrigger.Trigger.FROM_2_TO_3:
+                    transform.position = new Vector3(0, 0, 25);
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                    break;
+                case DoorTrigger.Trigger.FROM_3_TO_2:
+                    transform.position = new Vector3(0, 0, 19);
                     transform.rotation = Quaternion.Euler(0, 180, 0);
                     break;
             }
