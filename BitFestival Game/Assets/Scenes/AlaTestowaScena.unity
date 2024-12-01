@@ -3578,6 +3578,145 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 419662, guid: 496fa247adc61d44ebaeaf9d72671287, type: 3}
   m_PrefabInstance: {fileID: 868043606}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &890079429
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1079878963}
+    m_Modifications:
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -801
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -399.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084679146511084977, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: textSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084679146511084977, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1324076749}
+    - target: {fileID: 4084679146511084977, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084679146511084977, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: Wait, I am in some kind of time loop, I have to prevent the reboot.
+        I think I need to turn off this reactor.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084679146511084977, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: audioClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084679146511084977, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: eb06273e52c2d2a43a89f3f69bdeae59, type: 3}
+    - target: {fileID: 5955922028522984407, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_Name
+      value: TimeLoop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955922028522984407, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595897220107735892, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 8595897220107735892, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+--- !u!224 &890079430 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3214720112397670939, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+  m_PrefabInstance: {fileID: 890079429}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &892512971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4090,8 +4229,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.49236736, g: 0.97735846, b: 0.94701505, a: 1}
+  m_Intensity: 0.7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4149,13 +4288,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999167752}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6090933, y: -0.25414357, z: 0.048973046, w: 0.7496786}
+  m_LocalRotation: {x: 0.6997435, y: -0.14819741, z: 0.1387239, w: 0.6849469}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 69.742, y: -68.156, z: -43.005}
+  m_LocalEulerAnglesHint: {x: 88.576, y: -159.077, z: -135.664}
 --- !u!1 &1026321717
 GameObject:
   m_ObjectHideFlags: 0
@@ -4215,6 +4354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1079878962}
   spamButtonMinigame: {fileID: 249339478}
+  timeLoopDialog: {fileID: 1737147621}
 --- !u!1 &1027372386
 GameObject:
   m_ObjectHideFlags: 0
@@ -4447,6 +4587,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1322017807}
+  - {fileID: 890079430}
   - {fileID: 1413991716}
   - {fileID: 1027372387}
   - {fileID: 249339479}
@@ -5914,7 +6055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4084679146511084977, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
       propertyPath: lines.Array.data[0]
-      value: Starting Time fusion procedure, disengaging the time fuse, action authorizated
+      value: Starting Time fusion procedure, disengaging the time fuse, action authorized
         by dr Rick von Tresckow
       objectReference: {fileID: 0}
     - target: {fileID: 4084679146511084977, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
@@ -7129,6 +7270,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 402842, guid: 20a37f90760425a44ad7a8650eecc7b7, type: 3}
   m_PrefabInstance: {fileID: 1733884996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1737147621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5955922028522984407, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+  m_PrefabInstance: {fileID: 890079429}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1740339333
 GameObject:
