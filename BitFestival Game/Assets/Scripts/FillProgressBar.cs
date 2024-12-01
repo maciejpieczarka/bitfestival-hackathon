@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class FillProgressBar : MonoBehaviour
 {
     public Slider mSlider;
     public float decreaseAmount = 5f; // Amount to decrease each interval
     public float decreaseInterval = 0.5f; // Time in seconds between decreases
+    public TextMeshProUGUI tmpText;
+    public AudioSource audioSource;  // Reference to the existing AudioSource in the scene
+    public AudioClip soundClip;
     private void Start()
     {
         // Start the repeating function
@@ -15,8 +19,9 @@ public class FillProgressBar : MonoBehaviour
 
     public void IncreaseValue()
     {
-        if (mSlider.value >= 98) { 
-            Debug.Log("100%!");
+        if (mSlider.value >= 98) {
+            audioSource.PlayOneShot(soundClip);
+            tmpText.text = "Great, you got it!";
             StopDecreasing();
         }
         else mSlider.value += 5;
