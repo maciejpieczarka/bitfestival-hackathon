@@ -690,6 +690,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4084679146511084977, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
+      propertyPath: lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5955922028522984407, guid: cab5c2276ee52c7479a4b38c1124049d, type: 3}
       propertyPath: m_Name
       value: DialogueBox

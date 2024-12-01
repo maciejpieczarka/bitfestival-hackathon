@@ -19,13 +19,13 @@ public class MainMenu : MonoBehaviour
 
     public void Restart()
     {
-        LevelManager.Instance.LoadScene("Menu", "CrossFade");
+        LevelManager.Instance.LoadScene("AlaTestowaScena", "CrossFade");
         MusicManager.Instance.PlayMusic("MainMenu");
     }
 
     public void Play() 
     {
-        LevelManager.Instance.LoadScene("Menu", "CrossFade");
+        LevelManager.Instance.LoadScene("AlaTestowaScena", "CrossFade");
         MusicManager.Instance.PlayMusic("MainMenu");
     }
     public void Quit() 
