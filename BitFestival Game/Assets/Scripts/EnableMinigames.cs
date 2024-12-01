@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class EnableMinigames : MonoBehaviour
 {
     public Canvas canvas; // Reference to the Canvas
     public GameObject spamButtonMinigameFirstDoor; // Name of the child GameObject to activate
     public GameObject spamButtonMinigameSecondDoor; // Name of the child GameObject to activate
+    public GameObject vaultMiniGame; // Name of the child GameObject to activate
+    public GameObject switchMiniGame; // Name of the child GameObject to activate
 
     private PlayerController2 playerController;
 
@@ -34,6 +36,18 @@ public class EnableMinigames : MonoBehaviour
                         spamButtonMinigameSecondDoor.SetActive(true);
                     break;
             }
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            vaultMiniGame.SetActive(!vaultMiniGame.activeSelf);
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            switchMiniGame.SetActive(!switchMiniGame.activeSelf);
         }
     }
 
