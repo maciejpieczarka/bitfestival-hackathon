@@ -10,6 +10,7 @@ public class PlayerController2 : MonoBehaviour
         NONE,
         OPEN_FIRST_DOOR,
         OPEN_SECOND_DOOR,
+        DO_SWITCHES,
     }
 
     public PossibleAction possibleAction = PossibleAction.NONE;
@@ -136,6 +137,9 @@ public class PlayerController2 : MonoBehaviour
                 case DoorTrigger.Trigger.OPEN_SECOND_DOOR_TGRIGGER:
                     possibleAction = PossibleAction.OPEN_SECOND_DOOR;
                     break;
+                case DoorTrigger.Trigger.DO_SWITCHES_TRIGGER:
+                    possibleAction = PossibleAction.DO_SWITCHES;
+                    break;
             }
         }
     }
@@ -155,6 +159,9 @@ public class PlayerController2 : MonoBehaviour
                     possibleAction = PossibleAction.NONE;
                     break;
                 case DoorTrigger.Trigger.OPEN_SECOND_DOOR_TGRIGGER:
+                    possibleAction = PossibleAction.NONE;
+                    break;
+                case DoorTrigger.Trigger.DO_SWITCHES_TRIGGER:
                     possibleAction = PossibleAction.NONE;
                     break;
             }

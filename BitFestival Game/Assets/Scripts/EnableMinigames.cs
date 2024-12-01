@@ -14,6 +14,7 @@ public class EnableMinigames : MonoBehaviour
 
     private bool firstDoorOpened = false;
     private bool secondDoorOpened = false;
+    private bool switchesDone = false;
 
     private void Start()
     {
@@ -34,6 +35,10 @@ public class EnableMinigames : MonoBehaviour
                 case PlayerController2.PossibleAction.OPEN_SECOND_DOOR:
                     if (!secondDoorOpened)
                         spamButtonMinigameSecondDoor.SetActive(true);
+                    break;
+                case PlayerController2.PossibleAction.DO_SWITCHES:
+                    if (!switchesDone)
+                        switchMiniGame.SetActive(true);
                     break;
             }
         }
@@ -63,5 +68,10 @@ public class EnableMinigames : MonoBehaviour
     public void OpenSecondDoor()
     {
         secondDoorOpened = true;
+    }
+
+    public void doSwitches()
+    {
+        switchesDone = true;
     }
 }
