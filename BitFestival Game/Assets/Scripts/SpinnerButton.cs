@@ -51,6 +51,7 @@ public class SpinnerButton : MonoBehaviour
     {
         // Stop the spinning
         isSpinning = false;
+
         Debug.Log("Button spinning stopped.");
 
         // Check if the button's rotation is within ±45 degrees of the original rotation
@@ -59,7 +60,7 @@ public class SpinnerButton : MonoBehaviour
         // Normalize the angles for comparison
         float rotationDifference = Mathf.DeltaAngle(originalZRotation, currentZRotation);
 
-        if (Mathf.Abs(rotationDifference) <= 45f)
+        if (Mathf.Abs(rotationDifference) <= angleErrorMargin)
         {
             Debug.Log("YEYY!!");
         }
