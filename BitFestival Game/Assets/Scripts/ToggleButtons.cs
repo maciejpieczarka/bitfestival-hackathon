@@ -2,24 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class ToggleButtons : MonoBehaviour
 {
     public Button[] buttons; // Array to hold the buttons
     public Toggle[] toggles; // Array to hold the toggles
 
-    private bool[] buttonStates; // Array to track the state of each button
-
     private void Start()
     {
         // Validate arrays
-        if (buttons.Length != 5 || toggles.Length != 5)
+        if (buttons == null || toggles == null || buttons.Length != toggles.Length)
         {
-            Debug.LogError("Ensure there are exactly 5 buttons and 5 toggles assigned.");
+            Debug.LogError("Ensure that buttons and toggles are assigned and have the same length.");
             return;
         }
-
-        // Initialize button states
-        buttonStates = new bool[buttons.Length];
 
         // Set toggles' background colors to red at the start
         foreach (Toggle toggle in toggles)
@@ -52,14 +48,45 @@ public class ToggleButtons : MonoBehaviour
                 break;
 
             case 3: // Button 3: Toggle the last two toggles
-                ToggleRange(3, 4);
+                ToggleRange(toggles.Length - 2, toggles.Length - 1);
                 break;
 
             case 4: // Button 4: Reset all toggles
                 ResetAllToggles();
                 break;
         }
+
+        // Rotate the button
+        TurnButton(index);
     }
+
+    private void TurnButton(int index)
+    {
+        if (index < 0 || index >= buttons.Length)
+        {
+            Debug.LogWarning("Invalid button index for rotation.");
+            return;
+        }
+
+        RectTransform buttonRectTransform = buttons[index].GetComponent<RectTransform>();
+        if (buttonRectTransform != null)
+        {
+            // Toggle rotation between 180 and 0 degrees
+            if (Mathf.Approximately(buttonRectTransform.rotation.eulerAngles.z, 180f))
+            {
+                buttonRectTransform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else
+            {
+                buttonRectTransform.rotation = Quaternion.Euler(0, 0, 180);
+            }
+        }
+        else
+        {
+            Debug.LogWarning($"Button at index {index} is missing a RectTransform.");
+        }
+    }
+
 
     private void ToggleSpecificToggles(bool even)
     {
