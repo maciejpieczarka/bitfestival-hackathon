@@ -456,7 +456,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0044098, y: -174.87}
+  m_AnchoredPosition: {x: 0.0044098, y: -311.59998}
   m_SizeDelta: {x: 634.92, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &86730546
@@ -481,8 +481,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Maciej pieczarka
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9398c5511e5355c41b138a8c9b3ef337, type: 2}
-  m_sharedMaterial: {fileID: 4451467923315905857, guid: 9398c5511e5355c41b138a8c9b3ef337, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 71691a6c0cf7b2c4797efc9906492660, type: 2}
+  m_sharedMaterial: {fileID: -751100867417302842, guid: 71691a6c0cf7b2c4797efc9906492660, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1061,7 +1061,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 397.73}
+  m_AnchoredPosition: {x: 0.000015259, y: 261}
   m_SizeDelta: {x: 804.4815, y: 222.1318}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &335116468
@@ -1086,8 +1086,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Autorzy
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9398c5511e5355c41b138a8c9b3ef337, type: 2}
-  m_sharedMaterial: {fileID: 4451467923315905857, guid: 9398c5511e5355c41b138a8c9b3ef337, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 71691a6c0cf7b2c4797efc9906492660, type: 2}
+  m_sharedMaterial: {fileID: -751100867417302842, guid: 71691a6c0cf7b2c4797efc9906492660, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3029,7 +3029,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.98439, y: 155.13}
+  m_AnchoredPosition: {x: 20.98439, y: 18.400024}
   m_SizeDelta: {x: 592.9559, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1295357125
@@ -3054,8 +3054,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Alicja Janeczko
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9398c5511e5355c41b138a8c9b3ef337, type: 2}
-  m_sharedMaterial: {fileID: 4451467923315905857, guid: 9398c5511e5355c41b138a8c9b3ef337, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 71691a6c0cf7b2c4797efc9906492660, type: 2}
+  m_sharedMaterial: {fileID: -751100867417302842, guid: 71691a6c0cf7b2c4797efc9906492660, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3297,7 +3297,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.98439, y: 45.130005}
+  m_AnchoredPosition: {x: 20.98439, y: -91.599976}
   m_SizeDelta: {x: 592.96, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1431814005
@@ -3322,8 +3322,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Pawe\u0142 Noszczyk"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9398c5511e5355c41b138a8c9b3ef337, type: 2}
-  m_sharedMaterial: {fileID: 4451467923315905857, guid: 9398c5511e5355c41b138a8c9b3ef337, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 71691a6c0cf7b2c4797efc9906492660, type: 2}
+  m_sharedMaterial: {fileID: -751100867417302842, guid: 71691a6c0cf7b2c4797efc9906492660, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3896,7 +3896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: -64.869995}
+  m_AnchoredPosition: {x: 0.000015259, y: -201.59998}
   m_SizeDelta: {x: 440.8568, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1759646345
@@ -3921,8 +3921,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Piotr Hejmo
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9398c5511e5355c41b138a8c9b3ef337, type: 2}
-  m_sharedMaterial: {fileID: 4451467923315905857, guid: 9398c5511e5355c41b138a8c9b3ef337, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 71691a6c0cf7b2c4797efc9906492660, type: 2}
+  m_sharedMaterial: {fileID: -751100867417302842, guid: 71691a6c0cf7b2c4797efc9906492660, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4033,8 +4033,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 464.33, y: -31.18}
-  m_SizeDelta: {x: 991.35, y: 1017.6}
+  m_AnchoredPosition: {x: 464.33, y: 0.010002}
+  m_SizeDelta: {x: 991.35, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1887787619
 GameObject:
