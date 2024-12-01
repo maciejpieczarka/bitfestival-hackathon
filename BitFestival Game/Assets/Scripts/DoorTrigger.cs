@@ -14,6 +14,7 @@ public class DoorTrigger : MonoBehaviour
         OPEN_FIRST_DOOR_TRIGGER,
         OPEN_SECOND_DOOR_TGRIGGER,
         DO_SWITCHES_TRIGGER,
+        DO_VAULT_TRIGGER,
     }
 
     public Trigger trigger;

@@ -15,6 +15,7 @@ public class EnableMinigames : MonoBehaviour
     private bool firstDoorOpened = false;
     private bool secondDoorOpened = false;
     private bool switchesDone = false;
+    private bool vaultDone = false;
 
     private void Start()
     {
@@ -39,6 +40,10 @@ public class EnableMinigames : MonoBehaviour
                 case PlayerController2.PossibleAction.DO_SWITCHES:
                     if (!switchesDone)
                         switchMiniGame.SetActive(true);
+                    break;
+                case PlayerController2.PossibleAction.DO_VAULT:
+                    if (!switchesDone)
+                        vaultMiniGame.SetActive(true);
                     break;
             }
         }
@@ -73,5 +78,10 @@ public class EnableMinigames : MonoBehaviour
     public void doSwitches()
     {
         switchesDone = true;
+    }
+
+    public void doVault()
+    {
+        vaultDone = true;
     }
 }
