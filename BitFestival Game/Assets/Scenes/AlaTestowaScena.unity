@@ -1120,6 +1120,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5201423646680458952, guid: ea0853a3b2545524481b0c984f27afd1, type: 3}
   m_PrefabInstance: {fileID: 227911045}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &249339478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1875995685670547360, guid: 1c5e811d54b88314aa335da4913b870c, type: 3}
+  m_PrefabInstance: {fileID: 1162511250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &249339479 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 810510148379666773, guid: 1c5e811d54b88314aa335da4913b870c, type: 3}
@@ -4331,8 +4336,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1026321718}
   - component: {fileID: 1026321719}
+  - component: {fileID: 1026321720}
   m_Layer: 0
-  m_Name: LevelManager
+  m_Name: Minigames Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4365,6 +4371,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49981cd4defa73e43b85c5e9298a46a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1026321720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026321717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e2fb95bc0d3374bad861f193f979db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 1079878962}
+  spamButtonMinigame: {fileID: 249339478}
 --- !u!1 &1027372386
 GameObject:
   m_ObjectHideFlags: 0
