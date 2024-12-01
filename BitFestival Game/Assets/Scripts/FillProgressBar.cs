@@ -11,6 +11,7 @@ public class FillProgressBar : MonoBehaviour
     public TextMeshProUGUI tmpText;
     public AudioSource audioSource;  // Reference to the existing AudioSource in the scene
     public AudioClip soundClip;
+    public GameObject doorToDestroy;
     private void Start()
     {
         // Start the repeating function
@@ -23,6 +24,7 @@ public class FillProgressBar : MonoBehaviour
             audioSource.PlayOneShot(soundClip);
             tmpText.text = "Great, you got it!";
             StopDecreasing();
+            Destroy(doorToDestroy);
         }
         else mSlider.value += 5;
     }
