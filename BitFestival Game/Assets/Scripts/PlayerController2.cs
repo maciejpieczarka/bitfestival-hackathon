@@ -97,6 +97,9 @@ public class PlayerController2 : MonoBehaviour
         lastTrigger = Time.time;
         if (other.CompareTag("trigger"))
         {
+            if (other.GetComponent<DoorTrigger>() == null)
+                return;
+
             DoorTrigger.Trigger trigger = other.GetComponent<DoorTrigger>().trigger;
             cameraController.SwitchRoomView(trigger);
             switch (trigger)

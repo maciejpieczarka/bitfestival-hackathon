@@ -18,7 +18,7 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentRoom = room1;
+        currentRoom = room2;
 
         player = GameObject.Find("Player");
     }
